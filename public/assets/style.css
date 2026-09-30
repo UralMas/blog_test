@@ -9,6 +9,9 @@ body {
 a {
   color: #1995f6;
 }
+a:hover, a:focus {
+  text-decoration: none;
+}
 
 header {
   border-bottom: 1px solid #ccc;
@@ -66,6 +69,14 @@ main {
   font-size: 0.85rem;
   color: #666;
   font-style: italic;
+}
+
+.sort {
+  margin-bottom: 20px;
+}
+
+.pagination {
+  text-align: center;
 }
 
 /*# sourceMappingURL=style.css.map */

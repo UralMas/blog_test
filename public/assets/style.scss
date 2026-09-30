@@ -1,4 +1,5 @@
 $color-text: #333;
+$color-meta-text: #666;
 $color-border: #ccc;
 
 @mixin section-border($side) {
@@ -14,8 +15,14 @@ body {
   font-family: Arial, sans-serif;
   color: $color-text;
 }
+
 a {
   color: #1995f6;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
 }
 
 header {
@@ -72,7 +79,15 @@ main {
 
   &__meta {
     font-size: .85rem;
-    color: #666;
+    color: $color-meta-text;
     font-style: italic;
   }
+}
+
+.sort {
+  margin-bottom:20px;
+}
+
+.pagination {
+  text-align: center;
 }

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\helpers;
+namespace App\Helpers;
 
 use Smarty\Smarty;
 

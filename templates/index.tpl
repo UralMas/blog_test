@@ -18,7 +18,7 @@
                             <h3><a href="/?page=post&id={$post.id}">{$post.title}</a></h3>
                             <p>{$post.description}</p>
                             <div class="post-card__meta">
-                                Просмотров: {$post.views} | Дата: {$post.published_at}
+                                Дата публикации: {$post.published_at} | Просмотров: {$post.views}
                             </div>
                         </div>
                     </div>

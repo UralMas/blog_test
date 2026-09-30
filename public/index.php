@@ -2,22 +2,31 @@
 
 declare(strict_types=1);
 
-use App\helpers\SmartyHelper;
-use App\Models\Category;
+use App\Controllers\CategoryController;
+use App\Controllers\IndexController;
+use App\exceptions\NotFoundException;
+use App\Helpers\SmartyHelper;
 
 require __DIR__ . '/../vendor/autoload.php';
 
 $smarty = SmartyHelper::init();
 
 try {
-    switch ($_GET['page'] ?? 'index') {
-        case 'index':
-            $smarty->assign('categories', Category::getNotEmptyWithPosts(3));
-            $smarty->display('index.tpl');
-            break;
-        default:
-            http_response_code(404);
-            echo "Ошибка 404 - страница не найдена";
+    try {
+        switch ($_GET['page'] ?? 'index') {
+            case 'index':
+                new IndexController($smarty)();
+                break;
+            case 'category':
+                new CategoryController($smarty)();
+                break;
+            default:
+                throw new NotFoundException('Ошибка 404 - страница не найдена');
+        }
+    } catch (NotFoundException $e) {
+        http_response_code(404);
+        $smarty->assign('message', $e->getMessage());
+        $smarty->display('error.tpl');
     }
 } catch (Throwable $e) {
     http_response_code(500);
