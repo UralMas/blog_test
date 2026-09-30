@@ -1,0 +1,32 @@
+$color-text: #333;
+$color-border: #ccc;
+
+@mixin section-border($side) {
+  border-#{$side}: 1px solid $color-border;
+  margin-#{$side}: 20px;
+  padding-#{$side}: 10px;
+}
+
+body {
+  font-size:1rem;
+  font-weight:400;
+  line-height: 1.3em;
+  font-family: Arial, sans-serif;
+  color: $color-text;
+}
+
+header {
+  @include section-border(bottom);
+}
+footer {
+  @include section-border(top);
+}
+
+main {
+  min-height: 400px;
+}
+
+.container {
+  max-width: 980px;
+  margin:0 auto;
+}

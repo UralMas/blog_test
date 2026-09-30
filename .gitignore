@@ -5,3 +5,8 @@
 /vendor
 
 composer.lock
+
+# smarty templates
+/templates_c
+
+/public/assets/style.css.map

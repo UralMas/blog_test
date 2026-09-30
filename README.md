@@ -2,7 +2,16 @@
 
 ## Запуск
 Вы полнить в терминале команду
+
 ```docker compose up -d --build```
+
+Затем в контейнере выполнить команды:
+
+```composer install```
+
+```mkdir -p templates_c```
+
+```chmod -R 777 templates_c```
 
 Открыть в браузере
 ```http://localhost:8086```
