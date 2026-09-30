@@ -42,7 +42,7 @@ main {
     padding-bottom: 0;
   }
 
-  .read-all {
+  &__read-all {
     margin-top: 1rem;
   }
 }
@@ -53,7 +53,24 @@ main {
   padding: .5rem .75rem 1rem;
   margin-bottom: .5rem;
 
-  .meta {
+  &__grid-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+
+    &--with-image {
+      grid-template-columns: 200px 1fr;
+    }
+  }
+
+  &__image {
+    img {
+      max-width: 200px;
+      height: auto;
+    }
+  }
+
+  &__meta {
     font-size: .85rem;
     color: #666;
     font-style: italic;

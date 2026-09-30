@@ -58,7 +58,7 @@ $linkStmt = $pdo->prepare('INSERT INTO `post_category` (`category_id`, `post_id`
 
 foreach ($titles as $i => $title) {
     $postStmt->execute([
-        'img' => 'https://f.sravni.ru/cms/KnowledgeBaseArticle/2kursy/1669888087133.png',
+        'img' => 'https://avatars.dzeninfra.ru/get-zen_doc/271828/pub_65b57815ace14d6477d997ae_65b57bcd1c254a25690dbcd6/scale_1200',
         't'   => $title,
         'd'   => "Краткое описание статьи «{$title}».",
         'c'   => "<p>Полный текст статьи «{$title}».</p><p>Здесь может быть много интересного контента.</p>",
