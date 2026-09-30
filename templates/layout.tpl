@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>{block name=title}Блог{/block}</title>
+    <title>{block name=title}Мой тестовый блог{/block}</title>
     <link rel="stylesheet" href="/assets/style.css" />
 </head>
 <body>

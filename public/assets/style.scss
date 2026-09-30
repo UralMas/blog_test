@@ -3,7 +3,7 @@ $color-border: #ccc;
 
 @mixin section-border($side) {
   border-#{$side}: 1px solid $color-border;
-  margin-#{$side}: 20px;
+  margin-#{$side}: 30px;
   padding-#{$side}: 10px;
 }
 
@@ -13,6 +13,9 @@ body {
   line-height: 1.3em;
   font-family: Arial, sans-serif;
   color: $color-text;
+}
+a {
+  color: #1995f6;
 }
 
 header {
@@ -29,4 +32,30 @@ main {
 .container {
   max-width: 980px;
   margin:0 auto;
+}
+
+.category-block {
+  @include section-border(bottom);
+
+  &:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .read-all {
+    margin-top: 1rem;
+  }
+}
+
+.post-card {
+  border: 1px solid $color-border;
+  border-radius: .25rem;
+  padding: .5rem .75rem 1rem;
+  margin-bottom: .5rem;
+
+  .meta {
+    font-size: .85rem;
+    color: #666;
+    font-style: italic;
+  }
 }
