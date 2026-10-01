@@ -7,22 +7,7 @@
             <p>{$category.description}</p>
 
             {foreach $category.posts as $post}
-                <div class="post-card">
-                    <div class="post-card__grid-row {if $post.image}post-card__grid-row--with-image{/if}">
-                        {if $post.image}
-                            <div class="post-card__image">
-                                <img src="{$post.image}" alt="{$post.title}" />
-                            </div>
-                        {/if}
-                        <div class="post-card__data">
-                            <h3><a href="/?page=post&id={$post.id}">{$post.title}</a></h3>
-                            <p>{$post.description}</p>
-                            <div class="post-card__meta">
-                                Дата публикации: {$post.published_at} | Просмотров: {$post.views}
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                {include file="partials/post_card.tpl"}
             {/foreach}
 
             <div class="category-block__read-all">

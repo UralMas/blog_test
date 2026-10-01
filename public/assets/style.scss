@@ -84,10 +84,24 @@ main {
   }
 }
 
+.post-meta {
+  font-size: .85rem;
+  color: $color-meta-text;
+  font-style: italic;
+}
+
 .sort {
   margin-bottom:20px;
 }
 
 .pagination {
   text-align: center;
+}
+
+.post-block {
+  @include section-border(bottom);
+
+  & > img {
+    max-width: 100%;
+  }
 }

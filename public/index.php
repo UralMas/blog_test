@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 use App\Controllers\CategoryController;
 use App\Controllers\IndexController;
+use App\Controllers\PostController;
 use App\exceptions\NotFoundException;
 use App\Helpers\SmartyHelper;
 
@@ -19,6 +20,9 @@ try {
                 break;
             case 'category':
                 new CategoryController($smarty)();
+                break;
+            case 'post':
+                new PostController($smarty)();
                 break;
             default:
                 throw new NotFoundException('Ошибка 404 - страница не найдена');

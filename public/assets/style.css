@@ -71,12 +71,27 @@ main {
   font-style: italic;
 }
 
+.post-meta {
+  font-size: 0.85rem;
+  color: #666;
+  font-style: italic;
+}
+
 .sort {
   margin-bottom: 20px;
 }
 
 .pagination {
   text-align: center;
+}
+
+.post-block {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 30px;
+  padding-bottom: 10px;
+}
+.post-block > img {
+  max-width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */
