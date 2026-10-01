@@ -6,6 +6,7 @@ namespace App;
 
 use PDO;
 use PDOException;
+use RuntimeException;
 
 /**
  * Класс подключения к БД
@@ -35,7 +36,7 @@ final class Database
                     PDO::ATTR_EMULATE_PREPARES   => false,
                 ]);
             } catch (PDOException $e) {
-                throw new \RuntimeException('DB connection error: ' . $e->getMessage());
+                throw new RuntimeException('DB connection error: ' . $e->getMessage());
             }
         }
 

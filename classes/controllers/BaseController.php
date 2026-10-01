@@ -11,7 +11,8 @@ use Smarty\Smarty;
  */
 class BaseController
 {
-    public function __construct(protected Smarty $smarty)
-    {
+    public function __construct(
+        protected Smarty $smarty
+    ) {
     }
 }
